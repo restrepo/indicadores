@@ -234,6 +234,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>STOP WARNINGS: <a href="http://stackoverflow.com/q/26724378/2268280">http://stackoverflow.com/q/26724378/2268280</a></p>
+<p>Try: <code>pd.options.mode.chained_assignment = None  # default='warn'</code></p>
 
 </div>
 </div>
@@ -244,7 +245,7 @@ div.output_prompt {
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s">&#39;&#39;&#39;Copy the next code into a first Raw NBconvert Cell to avoid display the commands</span>
@@ -304,7 +305,7 @@ display:none !important;
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre>%%bash
@@ -325,7 +326,7 @@ ipython nbconvert Indicadores-articulos.ipynb --to slides --reveal-prefix <span 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[NbConvertApp] Converting notebook Indicadores-articulos.ipynb to slides
-[NbConvertApp] Writing 1498768 bytes to Indicadores-articulos.slides.html
+[NbConvertApp] Writing 1526553 bytes to Indicadores-articulos.slides.html
 </pre>
 </div>
 </div>
@@ -407,7 +408,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">pylab</span> inline
@@ -432,14 +433,6 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>WARNING: pylab import has clobbered these variables: [&apos;ma&apos;]
-&#96;%matplotlib&#96; prevents importing * from pylab and numpy
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -450,17 +443,21 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s">&#39;display.max_colwidth&#39;</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+<span class="c">#stop warnings: use with caution!</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># default=&#39;warn&#39;</span>
+
 <span class="k">def</span> <span class="nf">read_google_cvs</span><span class="p">(</span><span class="n">gss_url</span><span class="o">=</span><span class="s">&quot;http://spreadsheets.google.com&quot;</span><span class="p">,</span>\
     <span class="n">gss_format</span><span class="o">=</span><span class="s">&quot;csv&quot;</span><span class="p">,</span>\
     <span class="n">gss_key</span><span class="o">=</span><span class="s">&quot;0AuLa_xuSIEvxdERYSGVQWDBTX1NCN19QMXVpb0lhWXc&quot;</span><span class="p">,</span>\
@@ -517,7 +514,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">Offline</span><span class="o">=</span><span class="bp">False</span>
@@ -684,7 +681,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
@@ -698,7 +695,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[68]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -731,7 +728,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;Unknown&#39;</span><span class="p">)</span>
@@ -747,78 +744,20 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 
 </div>
-    </div><div class="fragment" data-fragment-index="24">
-        
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Publication</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&#39;nature&#39;</span><span class="p">),</span><span class="s">&#39;Publication&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[138]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>294</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-        </div><div style=display:none>
+    </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">i</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Publication</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&#39;nature&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;GFAM: Grupo de Física Atómica y Molecular&#39;</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Sanz Vicario José Luis&#39;</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Impact Factor&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;41,456&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;GFAM: Grupo de Física Atómica y Molecular&#39;</span>
+<span class="n">df</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Sanz Vicario José Luis&#39;</span>
+<span class="n">df</span><span class="p">[</span><span class="s">&#39;Impact Factor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;41,456&#39;</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:2: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  from ipykernel import kernelapp as app
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:3: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  app.launch_new_instance()
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:4: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -832,14 +771,14 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Compatibilidad-con-la-carpeta-de-Indicadores-de-Google-Spread-Sheet">Compatibilidad con la carpeta de Indicadores de Google Spread Sheet<a class="anchor-link" href="#Compatibilidad-con-la-carpeta-de-Indicadores-de-Google-Spread-Sheet">&#182;</a></h3>
+<h3 id="Compatibilidad-con-la-carpeta-de-Indicadores-en-Google-Drive">Compatibilidad con la carpeta de Indicadores en Google Drive<a class="anchor-link" href="#Compatibilidad-con-la-carpeta-de-Indicadores-en-Google-Drive">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="30">
+</div><div class="fragment" data-fragment-index="29">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;Año&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Year</span>
@@ -871,11 +810,11 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <h3 id="Primer-autor-UdeA">Primer autor UdeA<a class="anchor-link" href="#Primer-autor-UdeA">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="32">
+</div><div class="fragment" data-fragment-index="31">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;First_UdeA_Author&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;NN&#39;</span><span class="p">)</span>\
@@ -899,26 +838,43 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <h3 id="&#193;rea">&#193;rea<a class="anchor-link" href="#&#193;rea">&#182;</a></h3>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div><div class="fragment" data-fragment-index="34">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;Area&#39;</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Desconocida&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">start</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s">&#39;Area&#39;</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Desconocida&#39;</span>
 <span class="k">for</span> <span class="n">G</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;GMC&#39;</span><span class="p">,</span><span class="s">&#39;FACOM&#39;</span><span class="p">,</span><span class="s">&#39;GFAM&#39;</span><span class="p">,</span><span class="s">&#39;MS&#39;</span><span class="p">,</span><span class="s">&#39;GFIF&#39;</span><span class="p">,</span><span class="s">&#39;FN&#39;</span><span class="p">]:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Grupo</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">G</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">Area</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Teórica&#39;</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">Area</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Teórica&#39;</span>
 
 <span class="k">for</span> <span class="n">G</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;GICM&#39;</span><span class="p">,</span><span class="s">&#39;GES&#39;</span><span class="p">,</span><span class="s">&#39;GOF&#39;</span><span class="p">,</span><span class="s">&#39;Biofísica&#39;</span><span class="p">,</span><span class="s">&#39;FIR&#39;</span><span class="p">]:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Grupo</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">G</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">Area</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Experimental&#39;</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">Area</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Experimental&#39;</span>
         
 <span class="c">#manual fix</span>
 <span class="k">for</span> <span class="n">TGES</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;Morales Aramburo Álvaro&#39;</span><span class="p">,</span><span class="s">&#39;Osorio Guillén Jorge Mario&#39;</span><span class="p">,</span><span class="s">&#39;Reyes Gómez Ernesto Amador&#39;</span><span class="p">]:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">First_UdeA_Author</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">TGES</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">Area</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Teórica&#39;</span>        
+        <span class="n">df</span><span class="o">.</span><span class="n">Area</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Teórica&#39;</span>        
+        
+<span class="n">end</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">end</span><span class="o">-</span><span class="n">start</span>
 </pre></div>
 
 </div>
@@ -930,19 +886,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:4: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:8: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:13: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.346997976303
 </pre>
 </div>
 </div>
@@ -979,7 +924,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;Cites&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
@@ -997,23 +942,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:12: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1035,7 +963,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">Cites</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -1049,7 +977,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[75]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1080,7 +1008,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;ISSN&#39;</span><span class="p">]</span><span class="o">==</span><span class="s">&#39;0000-0000&#39;</span><span class="p">,</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;DOI&#39;</span><span class="p">]</span><span class="o">==</span><span class="s">&#39;Not DOI&#39;</span><span class="p">)]</span>
@@ -1102,7 +1030,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[76]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1215,7 +1143,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;Desconocido&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -1245,7 +1173,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span><span class="o">-</span><span class="mi">5</span>
@@ -1259,7 +1187,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[78]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1276,7 +1204,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas5</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Año&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
@@ -1303,7 +1231,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">dfp</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -1319,7 +1247,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[80]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1379,7 +1307,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">config_inf</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;DEBUG&#39;</span><span class="p">:</span><span class="bp">False</span><span class="p">}</span> <span class="c">#Development mode</span>
@@ -1406,7 +1334,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">dfe</span><span class="p">[</span><span class="s">&#39;Año de ingreso&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">dfe</span><span class="p">[</span><span class="s">&#39;Fecha de ingreso&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="s">&#39;0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;null&#39;</span><span class="p">,</span><span class="s">&#39;0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;-1&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;-2&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;int&#39;</span><span class="p">)</span>
@@ -1437,7 +1365,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">dfeit</span><span class="o">=</span><span class="n">dfei</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">dfei</span><span class="p">[</span><span class="s">&#39;Estado&#39;</span><span class="p">]</span><span class="o">==</span><span class="s">&#39;Activo&#39;</span><span class="p">,</span><span class="n">dfei</span><span class="p">[</span><span class="s">&#39;Estado&#39;</span><span class="p">]</span><span class="o">==</span><span class="s">&#39;Graduado&#39;</span><span class="p">)]</span>
@@ -1466,7 +1394,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">dfei</span><span class="o">=</span><span class="n">dfei</span><span class="p">[</span><span class="n">dfei</span><span class="o">.</span><span class="n">Estado</span><span class="o">!=</span><span class="s">&#39;Desertor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -1526,46 +1454,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:17: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:21: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:19: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:32: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:33: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:34: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:26: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:44: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:23: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:28: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+<pre>/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:44: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
 </pre>
 </div>
 </div>
@@ -1590,7 +1479,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#est_p.sort(&#39;Año Graduación&#39;,ascending=False)[&#39;Año Graduación&#39;][i]</span>
@@ -1605,7 +1494,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Estudiantes&#39;</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;&#39;</span>
@@ -1627,23 +1516,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/main/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py:11: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
         </div></section>
     </section><section>
@@ -1662,7 +1534,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">G</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
@@ -1684,7 +1556,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">autor</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
@@ -1715,7 +1587,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">rdf</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -1777,7 +1649,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[89]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -2299,7 +2171,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">rdf</span><span class="o">.</span><span class="n">articles</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&#39;TOTAL&#39;</span><span class="p">)</span>
@@ -2324,11 +2196,11 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[90]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb47a7850&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b6e9b10&gt;</pre>
 </div>
 
 </div>
@@ -3235,7 +3107,7 @@ CiGEEEKIAhIcCiGEEEKIAhIcCiGEEEKIAhIcCiGEEEKIAv8PGSBj5NmKC3cAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">rdf</span><span class="o">.</span><span class="n">articles</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&#39;TOTAL&#39;</span><span class="p">)</span>
@@ -3260,11 +3132,11 @@ CiGEEEKIAhIcCiGEEEKIAhIcCiGEEEKIAhIcCiGEEEKIAv8PGSBj5NmKC3cAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[91]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb5155f90&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b44b250&gt;</pre>
 </div>
 
 </div>
@@ -4160,7 +4032,7 @@ JDgUQgghhBC5/h9Eowu+dKMtvQAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">y</span><span class="o">=</span><span class="mi">2009</span>
@@ -4176,7 +4048,7 @@ JDgUQgghhBC5/h9Eowu+dKMtvQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[92]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -4232,7 +4104,7 @@ dtype: object</pre>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">rdf</span><span class="o">.</span><span class="n">articles</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&#39;TOTAL&#39;</span><span class="p">)</span>
@@ -4257,11 +4129,11 @@ dtype: object</pre>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[93]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[32]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3ebbc139d0&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b4f4990&gt;</pre>
 </div>
 
 </div>
@@ -5261,7 +5133,7 @@ AABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">y</span><span class="o">=</span><span class="mi">2009</span>
@@ -5277,7 +5149,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[94]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -5321,7 +5193,7 @@ dtype: object</pre>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">rdf</span><span class="o">.</span><span class="n">articles</span><span class="p">,</span><span class="s">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&#39;mean(&gt;2006)=</span><span class="si">%.1F</span><span class="s">: TOTAL&#39;</span>  <span class="o">%</span><span class="k">rdf</span>[rdf.year&gt;2006].articles.mean(), )
@@ -6733,7 +6605,7 @@ KaWUUkpV0M6hUkoppZSqoJ1DpZRSSilV4f8DFt0yffwwvyMAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="s">&#39;</span><span class="si">%.1F</span><span class="s">&#39;</span> <span class="o">%</span><span class="k">rdf</span>[rdf.year&gt;2006][g].mean()
@@ -6747,7 +6619,7 @@ KaWUUkpV0M6hUkoppZSqoJ1DpZRSSilV4f8DFt0yffwwvyMAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[96]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[35]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -6787,7 +6659,7 @@ KaWUUkpV0M6hUkoppZSqoJ1DpZRSSilV4f8DFt0yffwwvyMAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Grupo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;barh&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -6802,11 +6674,11 @@ KaWUUkpV0M6hUkoppZSqoJ1DpZRSSilV4f8DFt0yffwwvyMAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[97]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb47d6390&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b48b1d0&gt;</pre>
 </div>
 
 </div>
@@ -7551,7 +7423,7 @@ wQwzMzMzMzMzqxUHM8zMzMzMzMysVv4fY7ma1fhnsU8AAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Grupo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;barh&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -7566,11 +7438,11 @@ wQwzMzMzMzMzqxUHM8zMzMzMzMysVv4fY7ma1fhnsU8AAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[98]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb479e310&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b6e4850&gt;</pre>
 </div>
 
 </div>
@@ -8410,7 +8282,7 @@ ZmZmVisOZpiZmZmZmZlZrTiYYWZmZmZmZma18v94QTNYraMKCwAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">Tot</span><span class="o">=</span><span class="n">publicadas</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;NN&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -8432,11 +8304,11 @@ ZmZmVisOZpiZmZmZmZlZrTiYYWZmZmZmZma18v94QTNYraMKCwAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[99]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[38]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb4ce9e90&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f49334b00d0&gt;</pre>
 </div>
 
 </div>
@@ -8838,7 +8710,7 @@ syZygG1mZmZm1kT/A5uM5ZaZc1vmAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">Tot</span><span class="o">=</span><span class="n">publicadas5</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;NN&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -8860,11 +8732,11 @@ syZygG1mZmZm1kT/A5uM5ZaZc1vmAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[100]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb4cf9b90&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f4933250150&gt;</pre>
 </div>
 
 </div>
@@ -9270,7 +9142,7 @@ RKQNCqRFRERERNqgQFpEREREpA1/A8DEJ87rPjwRAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;First_UdeA_Author&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;barh&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -9285,11 +9157,11 @@ RKQNCqRFRERERNqgQFpEREREpA1/A8DEJ87rPjwRAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[101]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb52d6750&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f49334cbb90&gt;</pre>
 </div>
 
 </div>
@@ -10057,7 +9929,7 @@ zMzMrJscWJmZmZmZmXWTAyszMzMzM7NucmBlZmZmZmbWTf8f8A/wK+ImAXYAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;First_UdeA_Author&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">15</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;barh&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="c">#</span>
@@ -10072,11 +9944,11 @@ zMzMrJscWJmZmZmZmXWTAyszMzMzM7NucmBlZmZmZmbWTf8f8A/wK+ImAXYAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[102]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[41]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb47e6a10&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b34b810&gt;</pre>
 </div>
 
 </div>
@@ -10922,7 +10794,7 @@ dYboAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">tipo5</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Tipo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&#39;Internacional&#39;</span><span class="p">),</span><span class="s">&#39;Internacional&#39;</span><span class="p">,</span> <span class="s">&#39;Nacional&#39;</span><span class="p">)</span>
@@ -10942,11 +10814,11 @@ dYboAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[103]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[42]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb4268350&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493317afd0&gt;</pre>
 </div>
 
 </div>
@@ -11746,7 +11618,7 @@ ZmZmNqj9f6//4UFVCUJqAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[[</span><span class="s">&#39;Cites&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -11763,11 +11635,11 @@ ZmZmNqj9f6//4UFVCUJqAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[104]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[43]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eb411b1d0&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f4933022dd0&gt;</pre>
 </div>
 
 </div>
@@ -12034,7 +11906,7 @@ JEkaYiaDkiRJQ8xkUJIkaYiZDEqSJA0xk0FJkqQh9v8Br4AmEwEkjxYAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[[</span><span class="s">&#39;Cites&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
@@ -12053,7 +11925,7 @@ JEkaYiaDkiRJQ8xkUJIkaYiZDEqSJA0xk0FJkqQh9v8Br4AmEwEkjxYAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[105]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12337,7 +12209,7 @@ kiRpjFkMSpIkjTGLQUmSpDFmMShJkjTGLAYlSZLG2P8P9kbS9kcy/JsAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">h_index</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
@@ -12370,11 +12242,11 @@ kiRpjFkMSpIkjTGLQUmSpDFmMShJkjTGLAYlSZLG2P8P9kbS9kcy/JsAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[106]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[45]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eaf23c710&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f4932261fd0&gt;</pre>
 </div>
 
 </div>
@@ -12959,7 +12831,7 @@ aplPv4HR/wAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">x</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">publicadas</span><span class="o">.</span><span class="n">Cites</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -12986,11 +12858,11 @@ aplPv4HR/wAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[107]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eaefb5cd0&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493b11d850&gt;</pre>
 </div>
 
 </div>
@@ -14027,7 +13899,7 @@ mZkVlBNBMzMzs4L6f9ZVJH5iVf+5AAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">x</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">publicadas5</span><span class="o">.</span><span class="n">Cites</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -14054,11 +13926,11 @@ mZkVlBNBMzMzs4L6f9ZVJH5iVf+5AAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[108]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[47]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eafa8d350&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f4932b9a490&gt;</pre>
 </div>
 
 </div>
@@ -15028,7 +14900,7 @@ EEKIECWJoBBCCCFEiJJEUAghhBAiREkiKIQQQggRov4fbVP0cHAvyOMAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">total</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Clasificación Colciencias&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15070,7 +14942,7 @@ EEKIECWJoBBCCCFEiJJEUAghhBAiREkiKIQQQggRov4fbVP0cHAvyOMAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Clasificación Colciencias&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;barh&#39;</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -15085,11 +14957,11 @@ EEKIECWJoBBCCCFEiJJEUAghhBAiREkiKIQQQggRov4fbVP0cHAvyOMAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[110]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[49]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eafb4e190&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f4932c1c890&gt;</pre>
 </div>
 
 </div>
@@ -15300,7 +15172,7 @@ ktQSCzFJkqSWWIhJkiS15P8DaTUFBV9b20QAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">total</span><span class="o">=</span><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Clasificación Colciencias&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15330,7 +15202,7 @@ ktQSCzFJkqSWWIhJkiS15P8DaTUFBV9b20QAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Clasificación Colciencias&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">&#39;barh&#39;</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -15345,11 +15217,11 @@ ktQSCzFJkqSWWIhJkiS15P8DaTUFBV9b20QAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[112]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[51]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eaf8f9290&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f49320022d0&gt;</pre>
 </div>
 
 </div>
@@ -15549,7 +15421,7 @@ KsRCTJIkqZD/DzhokOnmnkytAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">datetime</span>
@@ -15565,7 +15437,7 @@ KsRCTJIkqZD/DzhokOnmnkytAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[113]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[52]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -15605,7 +15477,7 @@ KsRCTJIkqZD/DzhokOnmnkytAAAAAElFTkSuQmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">fi</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;null&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -15623,11 +15495,11 @@ KsRCTJIkqZD/DzhokOnmnkytAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[114]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eaf7f4e90&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f49327b9250&gt;</pre>
 </div>
 
 </div>
@@ -15913,7 +15785,7 @@ Fn6SJEmFsPCTJEkqhIWfJElSIf4f4K7HoTtm2oAAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">15</span><span class="p">]</span>
@@ -15940,7 +15812,7 @@ Fn6SJEmFsPCTJEkqhIWfJElSIf4f4K7HoTtm2oAAAAAASUVORK5CYII=
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;GFIF&#39;</span><span class="p">,</span><span class="s">&#39;GES&#39;</span><span class="p">,</span><span class="s">&#39;GFAM&#39;</span><span class="p">,</span><span class="s">&#39;GMC&#39;</span><span class="p">,</span><span class="s">&#39;GOF&#39;</span><span class="p">,</span><span class="s">&#39;MS&#39;</span><span class="p">,</span><span class="s">&#39;FACOM&#39;</span><span class="p">]:</span>
@@ -16455,7 +16327,7 @@ TkRkelB/GJEBoj5wIiIiIiWjM3AiIiIiJaMETkRERKRklMCJiIiIlIwSOBEREZGSUQInIiIiUjJK
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;Desconocido&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -16474,11 +16346,11 @@ TkRkelB/GJEBoj5wIiIiIiWjM3AiIiIiJaMETkRERKRklMCJiIiIlIwSOBEREZGSUQInIiIiUjJK
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[117]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[56]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f3eaedfb490&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x7f493249a810&gt;</pre>
 </div>
 
 </div>
@@ -16785,7 +16657,7 @@ gg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;GFIF&#39;</span><span class="p">,</span><span class="s">&#39;GES&#39;</span><span class="p">,</span><span class="s">&#39;GFAM&#39;</span><span class="p">,</span><span class="s">&#39;GMC&#39;</span><span class="p">,</span><span class="s">&#39;GOF&#39;</span><span class="p">,</span><span class="s">&#39;MS&#39;</span><span class="p">,</span><span class="s">&#39;FACOM&#39;</span><span class="p">]:</span>
@@ -17247,7 +17119,7 @@ QmCC
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;GMC&#39;</span><span class="p">,</span><span class="s">&#39;GES&#39;</span><span class="p">]:</span>
@@ -17569,7 +17441,7 @@ SVKf+f807nLlteSw1gAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;GFIF&#39;</span><span class="p">,</span><span class="s">&#39;GFAM&#39;</span><span class="p">]:</span>
@@ -17900,7 +17772,7 @@ rkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;FACOM&#39;</span><span class="p">,</span><span class="s">&#39;GOF&#39;</span><span class="p">]:</span>
@@ -18322,7 +18194,7 @@ iC4iCa8AAAAISURBVKTE/wfAxD8NaH3+rgAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#0120-2650 revista colombiana de Fisica</span>
@@ -18346,7 +18218,7 @@ iC4iCa8AAAAISURBVKTE/wfAxD8NaH3+rgAAAABJRU5ErkJggg==
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[121]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18363,7 +18235,7 @@ iC4iCa8AAAAISURBVKTE/wfAxD8NaH3+rgAAAABJRU5ErkJggg==
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">DOI</span><span class="o">==</span><span class="s">&#39;Not DOI&#39;</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">ISSN</span><span class="o">==</span><span class="s">&#39;0000-0000&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span>
@@ -18377,7 +18249,7 @@ iC4iCa8AAAAISURBVKTE/wfAxD8NaH3+rgAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[122]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
