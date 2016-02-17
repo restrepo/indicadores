@@ -384,9 +384,15 @@ hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Indicadores Instituto de Física</h1></p>
+<p><h1>Indicadores Instituto de Física</h1>
+<br/><a href="https://scholar.google.com/citations?user=mxSOjTYAAAAJ">https://scholar.google.com/citations?user=mxSOjTYAAAAJ</a><br/></p>
 <h3>Diego Restrepo</h3><p><h3>Advertencia:</h3>
-El análisis de datos se ha realizado con procesos automáticos propensos a errores de programación.</p>
+El análisis de datos se han realizado con procesos automáticos propensos a errores de programación.</p>
+<p><h3>Repositorios GitHub:</h3></p>
+<ul>
+<li><a href="http://github.com/restrepo/gssis">http://github.com/restrepo/gssis</a></li>
+<li><a href="http://github.com/restrepo/indicadores">http://github.com/restrepo/indicadores</a></li>
+</ul>
 
 </div>
 </div>
@@ -397,7 +403,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This notebook can be run directly from <a href="http://mybinder.org">http://mybinder.org</a> service:</p>
+<p>This notebook can be run directly from  <a href="http://mybinder.org/restrepo/indicadores">http://mybinder.org/restrepo/indicadores</a></p>
 
 </div>
 </div>
@@ -522,7 +528,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Cargue-datos">Cargue datos<a class="anchor-link" href="#Cargue-datos">&#182;</a></h2><ul>
 <li>Formato CSV exportado del perfil de Google Scholar</li>
-<li>Table de tres columnas: (Datos artículo, Citaciones, Año) copiada y pegada del perfil de Google Scholar en formato CSV</li>
+<li>Tabla de tres columnas: (Datos artículo, Citaciones, Año) copiada y pegada del perfil de Google Scholar en formato CSV</li>
 <li><p>Información de Estuduiantes:</p>
 <p><code>'ESTUDIANTE','ASESOR','Estado','Fecha de ingreso','Fecha de graduación','GRUPO','PROGRAMA'</code></p>
 </li>
@@ -588,7 +594,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h2 id="Articulos">Artículos</h2></p>
 <h3 id="Metodologia">Metodologia<a class="anchor-link" href="#Metodologia">&#182;</a></h3><p>Desde el perfil de <a href="https://scholar.google.com/citations?sortby=pubdate&hl=en&user=mxSOjTYAAAAJ&view_op=list_works">Google Scholar</a> para el Instituto, se exportan todos los artículos en formato cvs.</p>
-<p>Con el programa <code>cvsreader_udea.py</code> en la carpeta <code>utilities</code> del repositorio  de GitHub <a href="https://github.com/restrepo/gssis"><code>gssis</code></a> se añade la siguiente información:</p>
+<p>Con el programa <code>csvreader_udea.py</code> en la carpeta <code>utilities</code> del repositorio  de GitHub: <a href="https://github.com/restrepo/gssis">gssis</a> se añade la siguiente información:</p>
 
 </div>
 </div>
@@ -656,7 +662,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><a href="https://scholar.google.com/citations?sortby=pubdate&hl=en&user=mxSOjTYAAAAJ&view_op=list_works">La página web con el perfil de Google Scholar</a> muestra hasta 1000 entradas en una tabla de tres columas con la información del artículo, el número de citas y el año de publicación. Si la correspondiente tabla se copia directamente en una hoja cálculo de Google, luego puede ser cargada como un archivo <code>csv</code> desde <code>pandas</code>. El título del artículo en la base de datos enriquecida de artículos puede ser contrastada con la columna de información de la hoja de cáculo de citaciones para asignarle el número de citas correspondiente. De ser necesario se puede recurrir a otra información de artículo como el por ejemplo: el volumen de la revista en que fue publicado</li>
+<li><a href="https://scholar.google.com/citations?sortby=pubdate&hl=en&user=mxSOjTYAAAAJ&view_op=list_works">La página web con el perfil de Google Scholar</a> muestra hasta 1000 entradas en una tabla de tres columas con la información del artículo, el número de citas y el año de publicación. Si la correspondiente tabla se copia directamente en una hoja cálculo de Google, luego puede ser cargada como un archivo <code>csv</code> desde <code>pandas</code>. El título del artículo en la base de datos enriquecida de artículos puede ser contrastada con la columna de información de la hoja de cáculo de citaciones para asignarle el número de citas correspondiente. De ser necesario se puede recurrir a otra información de artículo como por ejemplo: el volumen de la revista en que fue publicado</li>
 </ul>
 
 </div>
@@ -19221,8 +19227,12 @@ RK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Los aproximadamente 4 artículos de CMS se notan en los gráficos de citaciones. CMS y ATLAS están produciendo 100 artículos por año con 10,000 citaciones.  Las grandes colaboraciones impactan fuertemente en cantidad y calidad de artículos. </li>
+<li><p>Los aproximadamente 4 artículos de CMS se notan en los gráficos de citaciones. CMS y ATLAS están produciendo ~100 artículos por año con ~10,000 citaciones. Ver pr ejemplo:</p>
+</li>
+<li><p><a href="http://inspirehep.net/search?p=cn+atlas+and+date+2012&amp;of=hcs">http://inspirehep.net/search?p=cn+atlas+and+date+2012&amp;of=hcs</a></p>
+</li>
 </ul>
+<p>Las grandes colaboraciones impactan fuertemente en cantidad y calidad de artículos.</p>
 
 </div>
 </div>
