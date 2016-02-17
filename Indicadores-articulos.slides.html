@@ -34,29 +34,6 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <script src="http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/html5shiv.js"></script>
 <![endif]-->
 
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
 <!-- Get Font-awesome from cdn -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
 
@@ -168,9 +145,11 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
+html {
+  overflow-y: auto;
+}
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -223,14 +202,6 @@ div.output_prompt {
   /* 5px right shift to account for margin in parent container */
   margin: 5px 5px 0 0;
 }
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
 .rendered_html p {
   text-align: inherit;
 }
@@ -244,7 +215,9 @@ a.anchor-link {
 <body>
 <div class="reveal">
 <div class="slides">
-<section><section>
+<section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -253,7 +226,23 @@ a.anchor-link {
 <h1 id="Ayuda-slides">Ayuda slides<a class="anchor-link" href="#Ayuda-slides">&#182;</a></h1>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>STOP WARNINGS: <a href="http://stackoverflow.com/q/26724378/2268280">http://stackoverflow.com/q/26724378/2268280</a></p>
+<p>Try: <code>pd.options.mode.chained_assignment = None  # default='warn'</code></p>
+
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
@@ -292,7 +281,8 @@ display:none !important;
 </div>
 </div>
 
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="3">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -310,7 +300,9 @@ display:none !important;
 
 </div>
 </div>
-</div></div></section><section>
+</div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[77]:</div>
@@ -359,7 +351,10 @@ hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -375,7 +370,10 @@ hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -387,7 +385,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="7">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -397,7 +396,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="8">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -407,7 +408,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -416,7 +421,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h2 id="Configuraciones-generales">Configuraciones generales<a class="anchor-link" href="#Configuraciones-generales">&#182;</a></h2>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="10">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -447,7 +453,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
@@ -496,7 +506,10 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -514,7 +527,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="13">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -545,7 +559,23 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://stackoverflow.com/a/17231361">http://stackoverflow.com/a/17231361</a></p>
+
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -557,7 +587,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="16">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -569,7 +600,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="17">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -581,7 +614,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="18">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -593,7 +628,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="19">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -605,7 +642,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div></section><section>
+</div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -617,7 +656,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="21">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -628,7 +668,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -637,7 +681,10 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h2 id="Preparaci&#243;n-de-datos">Preparaci&#243;n de datos<a class="anchor-link" href="#Preparaci&#243;n-de-datos">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -647,7 +694,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="24">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
@@ -681,6 +729,58 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 
 </div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Arregle-manualmente">Arregle manualmente<a class="anchor-link" href="#Arregle-manualmente">&#182;</a></h3><p>Artículos con muchos autores</p>
+
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;Unknown&#39;</span><span class="p">)</span>
+<span class="n">jdr</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">==</span><span class="s">&#39;Unknown&#39;</span><span class="p">]</span>
+<span class="n">jdri</span><span class="o">=</span><span class="n">jdr</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">jdr</span><span class="o">.</span><span class="n">ISSN</span><span class="o">==</span><span class="s">&#39;1126-6708&#39;</span><span class="p">,</span><span class="n">jdr</span><span class="o">.</span><span class="n">ISSN</span><span class="o">==</span><span class="s">&#39;1550-7998&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">jdri</span><span class="p">:</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;GFIF: Grupo de Fenomenología de Interacciones Fundamentales&#39;</span>
+    <span class="n">df</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;José David Ruíz Álvarez&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">i</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Publication</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&#39;nature&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;GFAM: Grupo de Física Atómica y Molecular&#39;</span>
+<span class="n">df</span><span class="p">[</span><span class="s">&#39;Institution Authors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;Sanz Vicario José Luis&#39;</span>
+<span class="n">df</span><span class="p">[</span><span class="s">&#39;Impact Factor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s">&#39;41,456&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="24">
+        
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
@@ -695,6 +795,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 
 </div>
+        </div><div class="fragment" data-fragment-index="24">
+        
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
@@ -736,7 +838,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+        </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -745,7 +851,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h3 id="Compatibilidad-con-la-carpeta-de-Indicadores-en-Google-Drive">Compatibilidad con la carpeta de Indicadores en Google Drive<a class="anchor-link" href="#Compatibilidad-con-la-carpeta-de-Indicadores-en-Google-Drive">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="31">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
@@ -768,7 +875,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -777,7 +888,10 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h3 id="Primer-autor-UdeA">Primer autor UdeA<a class="anchor-link" href="#Primer-autor-UdeA">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -786,7 +900,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h3 id="&#193;rea">&#193;rea<a class="anchor-link" href="#&#193;rea">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="34">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
@@ -811,7 +926,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -820,7 +939,20 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h3 id="Incluyendo-citaciones...">Incluyendo citaciones...<a class="anchor-link" href="#Incluyendo-citaciones...">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To include in official code cvsreader_udea.py</p>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="37">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
@@ -844,7 +976,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -854,7 +990,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="39">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -883,7 +1020,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -894,7 +1035,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="41">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
@@ -1022,7 +1164,28 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;Desconocido&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Factor de Impacto&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">,</span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Grupo&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Grupo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;Unknown&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1032,7 +1195,39 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span><span class="o">-</span><span class="mi">5</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2011</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="45">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
@@ -1045,7 +1240,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1054,7 +1253,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h3 id="Datos-a-analizar-del-TOTAL-en-Google-Scholar:">Datos a analizar del TOTAL en Google Scholar:<a class="anchor-link" href="#Datos-a-analizar-del-TOTAL-en-Google-Scholar:">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="47">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
@@ -1103,7 +1303,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1113,7 +1317,10 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1122,7 +1329,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h3 id="Estudiantes">Estudiantes<a class="anchor-link" href="#Estudiantes">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="50">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
@@ -1136,7 +1344,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section><section>
+</div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1146,7 +1356,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="52">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
@@ -1163,7 +1374,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1172,7 +1387,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h5 id="Estudiantes--matriculados">Estudiantes  matriculados<a class="anchor-link" href="#Estudiantes--matriculados">&#182;</a></h5>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="54">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
@@ -1187,7 +1403,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1196,7 +1416,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h5 id="Art&#237;culos-con-participaci&#243;n-de-estudiantes">Art&#237;culos con participaci&#243;n de estudiantes<a class="anchor-link" href="#Art&#237;culos-con-participaci&#243;n-de-estudiantes">&#182;</a></h5>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="56">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
@@ -1254,6 +1475,35 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 
 </div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Todo: 'Año Graduación' :USAR PARA FILTRAR Profesores cuando eran estudiantes</p>
+
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c">#est_p.sort_values(&#39;Año Graduación&#39;,ascending=False)[&#39;Año Graduación&#39;][i]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="56">
+        
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
@@ -1278,7 +1528,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+        </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1288,7 +1542,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="61">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
@@ -1308,7 +1563,9 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="62">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
@@ -1324,7 +1581,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1334,7 +1595,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="64">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
@@ -1879,7 +2141,11 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1888,7 +2154,10 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h1 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h1>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1897,7 +2166,10 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <h2 id="Resultados-sobre-n&#250;mero-de-publicaciones">Resultados sobre n&#250;mero de publicaciones<a class="anchor-link" href="#Resultados-sobre-n&#250;mero-de-publicaciones">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1907,7 +2179,8 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="68">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
@@ -2817,7 +3090,9 @@ Uth0AAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div></section><section>
+</div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2827,7 +3102,10 @@ Uth0AAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2837,7 +3115,8 @@ Uth0AAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="71">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
@@ -3736,7 +4015,11 @@ EEKIfBIcCiGEEEKIfP8P0kNcFPv1qSAAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3746,7 +4029,8 @@ EEKIfBIcCiGEEEKIfP8P0kNcFPv1qSAAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="73">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
@@ -3801,7 +4085,11 @@ dtype: object</pre>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3811,7 +4099,8 @@ dtype: object</pre>
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="75">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
@@ -4822,7 +5111,11 @@ EL8DfJW2vuFa4M3DfFcd6Rwk6XhxEWxJkiT17DmUJElSz3AoSZKknuFQkiRJPcOhJEmSeoZDSZIk
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4832,7 +5125,8 @@ EL8DfJW2vuFa4M3DfFcd6Rwk6XhxEWxJkiT17DmUJElSz3AoSZKknuFQkiRJPcOhJEmSeoZDSZIk
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="77">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
@@ -4876,7 +5170,9 @@ dtype: object</pre>
 </div>
 </div>
 
-</div></div></section><section>
+</div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4887,7 +5183,10 @@ dtype: object</pre>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
@@ -6415,7 +6714,10 @@ WjHUaDQajUaj0QDw/+t38o+dAK5nAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6424,7 +6726,10 @@ WjHUaDQajUaj0QDw/+t38o+dAK5nAAAAAElFTkSuQmCC
 <h2 id="Resultados-Por-Grupos-de-Investigaci&#243;n">Resultados Por Grupos de Investigaci&#243;n<a class="anchor-link" href="#Resultados-Por-Grupos-de-Investigaci&#243;n">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -6433,7 +6738,8 @@ WjHUaDQajUaj0QDw/+t38o+dAK5nAAAAAElFTkSuQmCC
 <h4 id="Hist&#243;rico">Hist&#243;rico<a class="anchor-link" href="#Hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="82">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[67]:</div>
@@ -7184,7 +7490,11 @@ RU5ErkJggg==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -7193,7 +7503,8 @@ RU5ErkJggg==
 <h4 id="&#218;ltimos-cinco-a&#241;os">&#218;ltimos cinco a&#241;os<a class="anchor-link" href="#&#218;ltimos-cinco-a&#241;os">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="84">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
@@ -8000,7 +8311,11 @@ MDMzMzMzM7Na+f+e05I/O/WOXAAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8010,7 +8325,25 @@ MDMzMzMzM7Na+f+e05I/O/WOXAAAAABJRU5ErkJggg==
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>H0 lo separó en H 0 y no lo encontró: solución: admita alguna palabras faltantes en títulos largos:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1209/0295-5075/109/39002">http://dx.doi.org/10.1209/0295-5075/109/39002</a> </li>
+</ul>
+
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8028,7 +8361,8 @@ MDMzMzMzM7Na+f+e05I/O/WOXAAAAABJRU5ErkJggg==
 <h4 id="Hist&#243;rico">Hist&#243;rico<a class="anchor-link" href="#Hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="89">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
@@ -8441,7 +8775,11 @@ IGFgB0EQBEEQBEEDCQM7CIIgCIIgCBrI/wCnakoyeV1eswAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8450,7 +8788,8 @@ IGFgB0EQBEEQBEEDCQM7CIIgCIIgCBrI/wCnakoyeV1eswAAAABJRU5ErkJggg==
 <h4 id="&#218;ltimos-5-a&#241;os:">&#218;ltimos 5 a&#241;os:<a class="anchor-link" href="#&#218;ltimos-5-a&#241;os:">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="91">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
@@ -8845,7 +9184,11 @@ SUVORK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8855,7 +9198,10 @@ SUVORK5CYII=
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8865,7 +9211,8 @@ SUVORK5CYII=
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="94">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -8874,7 +9221,9 @@ SUVORK5CYII=
 <h4 id="Hist&#243;rico">Hist&#243;rico<a class="anchor-link" href="#Hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="95">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
@@ -9645,7 +9994,11 @@ MzMz6yYHVmZmZmZmZt3kwMrMzMzMzKyb/j8/phWYAtW0AgAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -9654,7 +10007,8 @@ MzMz6yYHVmZmZmZmZt3kwMrMzMzMzKyb/j8/phWYAtW0AgAAAABJRU5ErkJggg==
 <h4 id="&#218;ltimos-cinco-a&#241;os">&#218;ltimos cinco a&#241;os<a class="anchor-link" href="#&#218;ltimos-cinco-a&#241;os">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="97">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
@@ -10499,7 +10853,11 @@ hGEVBEEQBEEQBEHQRv4fwlq6C/H1DNUAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -10509,7 +10867,46 @@ hGEVBEEQBEEQBEHQRv4fwlq6C/H1DNUAAAAASUVORK5CYII=
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ejemplos plots con <code>pandas</code>: <a href="http://pandas.pydata.org/pandas-docs/dev/visualization.html">http://pandas.pydata.org/pandas-docs/dev/visualization.html</a></p>
+
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Internacionales-y-Nacionales">Internacionales y Nacionales<a class="anchor-link" href="#Internacionales-y-Nacionales">&#182;</a></h3>
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The group counts, analogous to the value_counts function above, can be computed
+    using size. This result is then reshaped into a table with unstack:</p>
+
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -10518,7 +10915,8 @@ hGEVBEEQBEEQBEHQRv4fwlq6C/H1DNUAAAAASUVORK5CYII=
 <h4 id="Hist&#243;rico">Hist&#243;rico<a class="anchor-link" href="#Hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="103">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[71]:</div>
@@ -11373,7 +11771,11 @@ XqEAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11382,7 +11784,8 @@ XqEAAAAASUVORK5CYII=
 <h4 id="&#218;ltimos-5-a&#241;os">&#218;ltimos 5 a&#241;os<a class="anchor-link" href="#&#218;ltimos-5-a&#241;os">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="105">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[42]:</div>
@@ -12192,7 +12595,11 @@ ZmZmZmZmNqQ5OGJmZmZmZmZmQ5qDI2ZmZmZmZmY2pP1/7PJjuarbdaoAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12201,7 +12608,8 @@ ZmZmZmZmNqQ5OGJmZmZmZmZmQ5qDI2ZmZmZmZmY2pP1/7PJjuarbdaoAAAAASUVORK5CYII=
 <h2 id="Resultados-por-citaciones-a-los-art&#237;culos">Resultados por citaciones a los art&#237;culos<a class="anchor-link" href="#Resultados-por-citaciones-a-los-art&#237;culos">&#182;</a></h2>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="107">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
@@ -12485,7 +12893,11 @@ zGRQkiRpiJkMSpIkDTGTQUmSpCFmMihJkjTE/j90mBy1wGHidwAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[44]:</div>
@@ -12775,7 +13187,10 @@ LAYlSZLGmMWgJEnSGLMYlCRJGmMWg5IkSWPs/wP5YtMA1FYhtwAAAABJRU5ErkJggg==
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12784,7 +13199,8 @@ LAYlSZLGmMWgJEnSGLMYlCRJGmMWg5IkSWPs/wP5YtMA1FYhtwAAAABJRU5ErkJggg==
 <h4 id="Global">Global<a class="anchor-link" href="#Global">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="111">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
@@ -13379,7 +13795,23 @@ RK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La diferencia con los últimos cinco años puede ser atribuible a los artículos con muchos autores</p>
+
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -13388,7 +13820,8 @@ RK5CYII=
 <h4 id="Por-Grupos-hist&#243;rico">Por Grupos hist&#243;rico<a class="anchor-link" href="#Por-Grupos-hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="114">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
@@ -14506,7 +14939,11 @@ oIiIiIgPKQgUERER8aH/D5uay1riO4POAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -14515,7 +14952,8 @@ oIiIiIgPKQgUERER8aH/D5uay1riO4POAAAAAElFTkSuQmCC
 <h4 id="Por-Grupos-&#250;ltimos-5-a&#241;os">Por Grupos &#250;ltimos 5 a&#241;os<a class="anchor-link" href="#Por-Grupos-&#250;ltimos-5-a&#241;os">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="116">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[47]:</div>
@@ -15463,7 +15901,9 @@ CCGED5IkUAghhBDCB0kSKIQQQgjhgyQJFEIIIYTwQZIECiGEEEL4IEkChRBCCCF8kCSBQgghhBA+
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="117">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15473,7 +15913,11 @@ CCGED5IkUAghhBDCB0kSKIQQQgjhgyQJFEIIIYTwQZIECiGEEEL4IEkChRBCCCF8kCSBQgghhBA+
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15484,7 +15928,10 @@ CCGED5IkUAghhBDCB0kSKIQQQgjhgyQJFEIIIYTwQZIECiGEEEL4IEkChRBCCCF8kCSBQgghhBA+
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15493,7 +15940,10 @@ CCGED5IkUAghhBDCB0kSKIQQQgjhgyQJFEIIIYTwQZIECiGEEEL4IEkChRBCCCF8kCSBQgghhBA+
 <h2 id="Restados-sobre-&#237;ndicadores-asociados-a-las-revistas">Restados sobre &#237;ndicadores asociados a las revistas<a class="anchor-link" href="#Restados-sobre-&#237;ndicadores-asociados-a-las-revistas">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15502,7 +15952,40 @@ CCGED5IkUAghhBDCB0kSKIQQQgjhgyQJFEIIIYTwQZIECiGEEEL4IEkChRBCCCF8kCSBQgghhBA+
 <h3 id="Clasificaci&#243;n-Colciencias">Clasificaci&#243;n Colciencias<a class="anchor-link" href="#Clasificaci&#243;n-Colciencias">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">total</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Clasificación Colciencias&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="k">print</span> <span class="s">&quot;Total A1+A2: &quot;</span><span class="p">,</span><span class="n">total</span><span class="p">[</span><span class="s">&#39;A1&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">total</span><span class="p">[</span><span class="s">&#39;A2&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total A1+A2:  738
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15511,7 +15994,8 @@ CCGED5IkUAghhBDCB0kSKIQQQgjhgyQJFEIIIYTwQZIECiGEEEL4IEkChRBCCCF8kCSBQgghhBA+
 <h4 id="Hist&#243;rico">Hist&#243;rico<a class="anchor-link" href="#Hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="123">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[49]:</div>
@@ -15727,7 +16211,11 @@ B5GR+QnGmtC2AAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15736,7 +16224,38 @@ B5GR+QnGmtC2AAAAAElFTkSuQmCC
 <h4 id="&#218;ltimos-cinco--a&#241;os">&#218;ltimos cinco  a&#241;os<a class="anchor-link" href="#&#218;ltimos-cinco--a&#241;os">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">total</span><span class="o">=</span><span class="n">publicadas5</span><span class="p">[</span><span class="s">&#39;Clasificación Colciencias&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="k">print</span> <span class="s">&quot;Total A1+A2: &quot;</span><span class="p">,</span><span class="n">total</span><span class="p">[</span><span class="s">&#39;A1&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">total</span><span class="p">[</span><span class="s">&#39;A2&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total A1+A2:  298
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="126">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[51]:</div>
@@ -15942,7 +16461,55 @@ i1kGTCGHAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Publicadas-&#250;ltimo-a&#241;o">Publicadas &#250;ltimo a&#241;o<a class="anchor-link" href="#Publicadas-&#250;ltimo-a&#241;o">&#182;</a></h4>
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">publicadas1</span><span class="o">=</span><span class="n">publicadas</span><span class="p">[</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Año&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">publicadas1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[52]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -15962,7 +16529,8 @@ i1kGTCGHAAAAAElFTkSuQmCC
 <h4 id="Hist&#243;rico">Hist&#243;rico<a class="anchor-link" href="#Hist&#243;rico">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="131">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[53]:</div>
@@ -16256,7 +16824,9 @@ EBZ+kiRJhbDwkyRJKsT/Az76uuaHVnk9AAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="132">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -16266,7 +16836,9 @@ EBZ+kiRJhbDwkyRJKsT/Az76uuaHVnk9AAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="133">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[54]:</div>
@@ -16279,7 +16851,11 @@ EBZ+kiRJhbDwkyRJKsT/Az76uuaHVnk9AAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -16288,7 +16864,8 @@ EBZ+kiRJhbDwkyRJKsT/Az76uuaHVnk9AAAAAElFTkSuQmCC
 <h4 id="Hist&#243;rico-por-Grupos">Hist&#243;rico por Grupos<a class="anchor-link" href="#Hist&#243;rico-por-Grupos">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="135">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[55]:</div>
@@ -16790,7 +17367,11 @@ OBEREZGSUQInIiIiUjJK4ERERERK5n8AcQlDN0NlXP8AAAAASUVORK5CYII=
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -16799,7 +17380,8 @@ OBEREZGSUQInIiIiUjJK4ERERERK5n8AcQlDN0NlXP8AAAAASUVORK5CYII=
 <h4 id="&#218;ltimos-cinco-a&#241;os-Global">&#218;ltimos cinco a&#241;os Global<a class="anchor-link" href="#&#218;ltimos-cinco-a&#241;os-Global">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="137">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[56]:</div>
@@ -17114,7 +17696,11 @@ Ak6SJGnCWMBJkiRNGAs4SZKkCWMBJ0mSNGEs4CRJkibM/w95rCfP8KquLwAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -17123,7 +17709,8 @@ Ak6SJGnCWMBJkiRNGAs4SZKkCWMBJ0mSNGEs4CRJkibM/w95rCfP8KquLwAAAABJRU5ErkJggg==
 <h4 id="&#218;ltimos-cinco-a&#241;os:-por-Grupos">&#218;ltimos cinco a&#241;os: por Grupos<a class="anchor-link" href="#&#218;ltimos-cinco-a&#241;os:-por-Grupos">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="139">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[57]:</div>
@@ -17570,7 +18157,11 @@ zFqMEzgzMzOzFuMEzszMzKzFOIEzMzMzazH/DwT3Sv0ALMBZAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -17580,7 +18171,8 @@ zFqMEzgzMzOzFuMEzszMzKzFOIEzMzMzazH/DwT3Sv0ALMBZAAAAAElFTkSuQmCC
 
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="141">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[58]:</div>
@@ -17900,7 +18492,9 @@ cJIkSX3m/wfQ6WyKROv0BQAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></div></section><section>
+</div>
+    </div></section><section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[59]:</div>
@@ -18234,6 +18828,7 @@ gg==
 </div>
 
 </div></section><section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[60]:</div>
@@ -18560,7 +19155,10 @@ RK5CYII=
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18570,7 +19168,10 @@ RK5CYII=
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section>
+    </section><section>
+    <section>
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18579,7 +19180,8 @@ RK5CYII=
 <h2 id="Conlusiones-generales">Conlusiones generales<a class="anchor-link" href="#Conlusiones-generales">&#182;</a></h2>
 </div>
 </div>
-</div><div class="fragment">
+</div><div class="fragment" data-fragment-index="146">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18591,7 +19193,9 @@ RK5CYII=
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="147">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18603,7 +19207,9 @@ RK5CYII=
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="148">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18615,7 +19221,9 @@ RK5CYII=
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="149">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18627,7 +19235,9 @@ RK5CYII=
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div>
+    </div><div class="fragment" data-fragment-index="150">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18639,61 +19249,205 @@ RK5CYII=
 
 </div>
 </div>
-</div></div></section></section>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c">#0120-2650 revista colombiana de Fisica</span>
+<span class="c">#Physical Review D -&gt; Jose David</span>
+<span class="c">#10.1038/nature09084</span>
+<span class="n">publicadas</span><span class="p">[</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;Grupo&#39;</span><span class="p">]</span><span class="o">==</span><span class="s">&#39;Unknown&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s">&#39;Year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(26, 35)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">DOI</span><span class="o">==</span><span class="s">&#39;Not DOI&#39;</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">ISSN</span><span class="o">==</span><span class="s">&#39;0000-0000&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(52, 33)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="n">publicadas</span><span class="p">[</span><span class="s">&#39;First_UdeA_Author&#39;</span><span class="p">]</span><span class="o">==</span><span class="s">&#39;NN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[64]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(25, 35)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">publicadas</span><span class="p">[</span><span class="n">publicadas</span><span class="o">.</span><span class="n">Group</span><span class="o">==</span><span class="s">&#39;Unknown&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[65]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(26, 35)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section>
+</div>
+</div>
+
+<script src="http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/head.min.js"></script>
+
+<script src="http://cdn.jsdelivr.net/reveal.js/2.6.2/js/reveal.js"></script>
 
 <script>
 
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/head.min.js",
-      "http://cdn.jsdelivr.net/reveal.js/2.6.2/js/reveal.js"
-    ],
+// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
 
-    function(head, Reveal){
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: "http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+{ src: "http://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+</script>
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
 
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "http://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "http://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
-
-        Reveal.addEventListener('slidechanged', update_scroll);
-
-    }
-);
-
+<script>
+Reveal.addEventListener( 'slidechanged', function( event ) {
+  window.scrollTo(0,0);
+  MathJax.Hub.Rerender(event.currentSlide);
+});
 </script>
 
 </body>
