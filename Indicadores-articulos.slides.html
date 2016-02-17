@@ -317,11 +317,12 @@ display:none !important;
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre>%%bash
 ipython nbconvert Indicadores-articulos.ipynb --to slides --reveal-prefix <span class="s2">&quot;http://cdn.jsdelivr.net/reveal.js/2.6.2&quot;</span> 
+<span class="c">#cp Indicadores-articulos.slides.html Indicadores-articulos-simple.slides.html</span>
 <span class="c">#cp Indicadores-articulos.slides.html /var/www/downloads</span>
 git commit -am <span class="s2">&quot;Slides update&quot;</span>
 git push origin master
@@ -337,9 +338,9 @@ git push origin master
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[master ec72b8a] Slides update
- 2 files changed, 15805 insertions(+), 13897 deletions(-)
- rewrite Indicadores-articulos.ipynb (61%)
+<pre>[master f1d17e4] Slides update
+ 1 file changed, 18700 insertions(+)
+ create mode 100644 Indicadores-articulos-simple.slides.html
 </pre>
 </div>
 </div>
@@ -347,10 +348,9 @@ git push origin master
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[NbConvertApp] Converting notebook Indicadores-articulos.ipynb to slides
-[NbConvertApp] Writing 1593611 bytes to Indicadores-articulos.slides.html
-cp: cannot create regular file ‘/var/www/downloads’: Permission denied
+[NbConvertApp] Writing 1594145 bytes to Indicadores-articulos.slides.html
 To git@github.com:restrepo/indicadores.git
-   b0c18bc..ec72b8a  master -&gt; master
+   ad8c843..f1d17e4  master -&gt; master
 </pre>
 </div>
 </div>
