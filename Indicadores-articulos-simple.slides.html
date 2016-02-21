@@ -309,37 +309,19 @@ display:none !important;
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre>%%bash
-ipython nbconvert Indicadores-articulos.ipynb --to slides --reveal-prefix <span class="s2">&quot;http://cdn.jsdelivr.net/reveal.js/2.6.2&quot;</span> 
-cp Indicadores-articulos.slides.html Indicadores-articulos-simple.slides.html
+<span class="c">#ipython nbconvert Indicadores-articulos.ipynb --to slides --reveal-prefix &quot;http://cdn.jsdelivr.net/reveal.js/2.6.2&quot; </span>
+<span class="c">#cp Indicadores-articulos.slides.html Indicadores-articulos-simple.slides.html</span>
 <span class="c">#cp Indicadores-articulos.slides.html /var/www/downloads</span>
-cp Indicadores-articulos-simple.slides.html /var/www/downloads
+<span class="c">#cp Indicadores-articulos-simple.slides.html /var/www/downloads</span>
 <span class="c">#git commit -am &quot;Slides update&quot;</span>
 <span class="c">#git push origin master</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[NbConvertApp] Using existing profile dir: u&apos;/home/restrepo/.ipython/profile_default&apos;
-[NbConvertApp] Converting notebook Indicadores-articulos.ipynb to slides
-[NbConvertApp] Support files will be in Indicadores-articulos_files/
-[NbConvertApp] Loaded template slides_reveal.tpl
-[NbConvertApp] Writing 1512823 bytes to Indicadores-articulos.slides.html
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -709,7 +691,7 @@ cp Indicadores-articulos-simple.slides.html /var/www/downloads
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Filtramos las publicadas usnado a  las que fue posible asignarles el ISSN o el DOI. Se crea una muestra adcional con las publicadas en los últimos cinco años.</li>
+<li>Obtenemos los  <strong>artículos publicados</strong>, filtrando  los artículos a los que fue posible asignarles el ISSN o el DOI. Se crea una muestra adcional con las artículos publicados en los últimos cinco años.</li>
 </ul>
 
 </div>
