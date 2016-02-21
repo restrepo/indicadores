@@ -305,29 +305,46 @@ display:none !important;
 </div>
 </div>
 </div>
-    </div></section><section>
+    </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre>%%bash
-<span class="c">#ipython nbconvert Indicadores-articulos.ipynb --to slides --reveal-prefix &quot;http://cdn.jsdelivr.net/reveal.js/2.6.2&quot; </span>
-<span class="c">#cp Indicadores-articulos.slides.html Indicadores-articulos-simple.slides.html</span>
+ipython nbconvert Indicadores-articulos.ipynb --to slides --reveal-prefix <span class="s2">&quot;http://cdn.jsdelivr.net/reveal.js/2.6.2&quot;</span> 
+cp Indicadores-articulos.slides.html Indicadores-articulos-simple.slides.html
 <span class="c">#cp Indicadores-articulos.slides.html /var/www/downloads</span>
-<span class="c">#cp Indicadores-articulos-simple.slides.html /var/www/downloads</span>
+cp Indicadores-articulos-simple.slides.html /var/www/downloads
 <span class="c">#git commit -am &quot;Slides update&quot;</span>
-<span class="c">#git push origin masterhttp</span>
+<span class="c">#git push origin master</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></section>
-    </section><section>
-    <section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[NbConvertApp] Using existing profile dir: u&apos;/home/restrepo/.ipython/profile_default&apos;
+[NbConvertApp] Converting notebook Indicadores-articulos.ipynb to slides
+[NbConvertApp] Support files will be in Indicadores-articulos_files/
+[NbConvertApp] Loaded template slides_reveal.tpl
+[NbConvertApp] Writing 1512823 bytes to Indicadores-articulos.slides.html
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div style=display:none>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -347,7 +364,8 @@ display:none !important;
 
 </div>
 </div>
-</div></section>
+</div>
+    </div></section>
     </section><section>
     <section>
     
@@ -356,12 +374,8 @@ display:none !important;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Indicadores Instituto de Física</h1>
-<br/><a href="https://scholar.google.com/citations?user=mxSOjTYAAAAJ">https://scholar.google.com/citations?user=mxSOjTYAAAAJ</a><br/></p>
-<h3>Diego Restrepo</h3><p><h3>Advertencia:</h3>
-El análisis de datos se ha realizado con procesos automáticos propensos a errores de programación.</p>
-<p><h3>Repositorios GitHub:</h3></p>
-<ul>
+<h1 id="Indicadores-Instituto-de-F&#237;sica">Indicadores Instituto de F&#237;sica<a class="anchor-link" href="#Indicadores-Instituto-de-F&#237;sica">&#182;</a></h1><h3 id="Basado--en-el-perfil-de-Google-Scholar-para-el-Instituto-de-F&#237;sica-de-la-UdeA">Basado  en el <a href="https://scholar.google.com/citations?user=mxSOjTYAAAAJ">perfil de Google Scholar para el Instituto de F&#237;sica de la UdeA</a><a class="anchor-link" href="#Basado--en-el-perfil-de-Google-Scholar-para-el-Instituto-de-F&#237;sica-de-la-UdeA">&#182;</a></h3><h3 id="Diego-Restrepo">Diego Restrepo<a class="anchor-link" href="#Diego-Restrepo">&#182;</a></h3><h3 id="Advertencia:">Advertencia:<a class="anchor-link" href="#Advertencia:">&#182;</a></h3><p>El análisis de datos se ha realizado con procesos automáticos propensos a errores de programación.</p>
+<h3 id="Repositorios-GitHub:">Repositorios GitHub:<a class="anchor-link" href="#Repositorios-GitHub:">&#182;</a></h3><ul>
 <li><a href="http://github.com/restrepo/gssis">http://github.com/restrepo/gssis</a></li>
 <li><a href="http://github.com/restrepo/indicadores">http://github.com/restrepo/indicadores</a></li>
 </ul>
@@ -609,7 +623,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Con el nombre exacto de la revista se obtiene la clasificación de Colciencias y su ISSN asociado desde la versión en <a href="https://docs.google.com/spreadsheets/d/1umgapW8KOIPqmu_hyjon3n2SXbnbDlmnRnXzjUHcXHE/edit?usp=drive_web">google spreadsheet</a> del acrhivo en excel del Publindex de Colciencias para revistas homologadas. (Se carga el csv desde el código)</li>
+<li><strong>Publindex</strong>: Con el nombre exacto de la revista se obtiene la clasificación de Colciencias y su ISSN asociado desde la versión en <a href="https://docs.google.com/spreadsheets/d/1umgapW8KOIPqmu_hyjon3n2SXbnbDlmnRnXzjUHcXHE/edit?usp=drive_web">google spreadsheet</a> del acrhivo en excel del Publindex de Colciencias para revistas homologadas. (Se carga el csv desde el código)</li>
 </ul>
 
 </div>
@@ -623,7 +637,21 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Con el ISSN se obtiene el factor de impacto con: <a href="https://goo.gl/JMHmhS">búsqueda de Google</a></li>
+<li>Con el ISSN se obtiene el <strong>factor de impacto</strong> con: <a href="https://goo.gl/JMHmhS">búsqueda de Google</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="21">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>El programa extrae el primer <strong>autor de la UdeA</strong> de la lista de autores y le asocia el <strong>Grupo de Investigación</strong> correspondiente.</li>
 </ul>
 
 </div>
@@ -638,13 +666,14 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>En este Notebook de Ipython además se añade la siguiente información</p>
 <ul>
-<li><a href="https://scholar.google.com/citations?sortby=pubdate&hl=en&user=mxSOjTYAAAAJ&view_op=list_works">La página web con el perfil de Google Scholar</a> muestra hasta 1000 entradas en una tabla de tres columas con la información del artículo, el número de citas y el año de publicación. Si la correspondiente tabla se copia directamente en una hoja cálculo de Google, luego puede ser cargada como un archivo <code>csv</code> desde <code>pandas</code>. El título del artículo en la base de datos enriquecida de artículos puede ser contrastada con la columna de información de la hoja de cáculo de citaciones para asignarle el número de citas correspondiente. De ser necesario se puede recurrir a otra información de artículo como por ejemplo: el volumen de la revista en que fue publicado</li>
+<li><strong>Citaciones</strong>: <a href="https://scholar.google.com/citations?sortby=pubdate&hl=en&user=mxSOjTYAAAAJ&view_op=list_works">La página web con el perfil de Google Scholar</a> muestra hasta 1000 entradas en una tabla de tres columas con la información del artículo, el número de citas y el año de publicación. Si la correspondiente tabla se copia directamente en una hoja cálculo de Google, luego puede ser cargada como un archivo <code>csv</code> desde <code>pandas</code>. El título del artículo en la base de datos enriquecida de artículos puede ser contrastada con la columna de información de la hoja de cáculo de citaciones para asignarle el número de citas correspondiente. De ser necesario se puede recurrir a otra información de artículo como por ejemplo: el volumen de la revista en que fue publicado</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="22">
+</div><div class="fragment" data-fragment-index="23">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -652,21 +681,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>El programa extrae el primer autor de la UdeA de la lista de autores y le asocia el Grupo de Investigación correspondiente.</li>
-</ul>
-
-</div>
-</div>
-</div>
-    </div><div class="fragment" data-fragment-index="23">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>A cada artículo se le asigna el área teórica o experimental dependiendo del Grupo al que pertenece, teniendo en cuenta algunos casos especiales para el Grupo de Estado Sólido.</li>
+<li><strong>Área</strong>: A cada artículo se le asigna el área teórica o experimental dependiendo del Grupo al que pertenece, teniendo en cuenta algunos casos especiales para el Grupo de Estado Sólido.</li>
 </ul>
 
 </div>
@@ -680,7 +695,7 @@ El análisis de datos se ha realizado con procesos automáticos propensos a erro
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>En la lista de autores de cada artículo se busca si contiene estudiantes de posgrado analizando la fecha del artículo con relación al año de ingreso y de graduación más uno, del estudiante de posgrado localizado.</li>
+<li><strong>Estudiantes</strong>: En la lista de autores de cada artículo se busca si contiene estudiantes de posgrado analizando la fecha del artículo con relación al año de ingreso y de graduación más uno, del estudiante de posgrado localizado.</li>
 </ul>
 
 </div>
